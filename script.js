@@ -1,5 +1,3 @@
-// (El código de la malla con canvas y click para cambiar semestre activo)
-
 const canvas = document.getElementById("malla");
 const ctx = canvas.getContext("2d");
 
@@ -19,18 +17,12 @@ canvas.addEventListener("mousemove", (e) => {
   mouse.y = e.clientY;
 });
 
-let semestreActivo = null; //
-document.querySelectorAll(".semestre").forEach((section) => {
-  section.addEventListener("click", () => {
-    semestreActivo = section.dataset.semestre;
-    draw();  // para que se actualice al instante
-  });
-});
-
+let semestreActivo = null;
 
 document.querySelectorAll(".semestre").forEach((section) => {
   section.addEventListener("click", () => {
     semestreActivo = section.dataset.semestre;
+    draw();  // Actualiza la malla inmediatamente al hacer clic
   });
 });
 
