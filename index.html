@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!--Licenciatura en Medicina integral y salud comunitaria-->
+  <meta charset="UTF-8">
+  <title>Malla Interactiva</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="malla"></canvas>
-  <h1 style="text-align: center;">Malla Curricular – Medicina Integral y Salud Comunitaria</h1>
-  
-<!-- 1er Semestre -->
-<section>
-  <h2>1° Semestre</h2>
-  <ul>
-    <li>Higiene y entornos saludables 0101HES</li>
-    <li>Biología molecular de la célula 0102BMC</li>
-    <li>Comunicación diagnóstico y ética en la relación médico-paciente 0103CDE</li>
-    <li>El cuerpo humano 0104CH</li>
-  </ul>
-</section>
 
-<!-- 2do Semestre -->
+  <canvas id="malla"></canvas>
+
+  <!-- Tus materias -->
+  <section class="semestre" data-semestre="1">
+    <h2>1° Semestre</h2>
+    <ul>
+      <li>Higiene y entornos saludables 0101HES</li>
+      <li>Biología molecular de la célula 0102BMC</li>
+      <li>Comunicación diagnóstico y ética en la relación médico-paciente 0103CDE</li>
+      <li>El cuerpo humano 0104CH</li>
+    </ul>
+  </section>
+
+ <!-- 2do Semestre -->
 <section>
   <h2>2° Semestre</h2>
   <ul>
@@ -50,6 +52,7 @@
     <li>Impacto del cambio climático en la salud 0404ICS</li>
   </ul>
 </section>
+  
 <!-- 5to Semestre -->
 <section>
   <h2>5° Semestre</h2>
@@ -60,6 +63,7 @@
     <li>Estadísticas en salud 0504ES</li>
   </ul>
 </section>
+  
 <!-- 6to Semestre -->
 <section>
   <h2>6° Semestre</h2>
@@ -70,6 +74,7 @@
     <li>Atención integral a mujeres 0604AIM</li>
   </ul>
 </section>
+  
 <!-- 7mo Semestre -->
 <section>
   <h2>7° Semestre</h2>
@@ -80,6 +85,7 @@
     <li>Padecimientos relacionados con alteraciones del metabolismo 0704PRAM</li>
   </ul>
 </section>
+  
 <!-- 8vo Semestre -->
 <section>
   <h2>8° Semestre</h2>
@@ -90,6 +96,7 @@
     <li>Disposiciones legales relativas a diversas problemáticas de salud 0408DLPS</li>
   </ul></section>
 <!-- 9no Semestre-->
+  
 <section>
   <h2>9° Semestre</h2>
   <ul>
@@ -99,6 +106,7 @@
     <li>Ética de las/los profesionales de la salud 0904EPS</li>
   </ul>
 </section>
+  
 <!-- 10mo y 11vo Semestre -->
 <section>
   <h2>10° Semestre y 11° Semestre</h2>
@@ -106,12 +114,14 @@
     <li>Internado médico con enfoque en primero y segundo nivel de atención 1001IME</li>
   </ul>
 </section>
-<!-- 12vo y 13vo Semeste -->
-<section>
-  <h2>12° y 13° Semestre</h2>
-  <ul>
-    <li>Servivio Social</li>
-  </ul>
-   <script src="script.js"></script>
+
+  <section class="semestre" data-semestre="11">
+    <h2>12° y 13° Semestre</h2>
+    <ul>
+      <li>Servicio Social</li>
+    </ul>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
