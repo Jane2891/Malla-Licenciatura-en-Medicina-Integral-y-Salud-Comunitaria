@@ -1,4 +1,3 @@
-<script src="script.js"></script>
 const canvas = document.getElementById("malla");
 const ctx = canvas.getContext("2d");
 
@@ -18,7 +17,7 @@ canvas.addEventListener("mousemove", (e) => {
   mouse.y = e.clientY;
 });
 
-let semestreActivo = null; // ← este cambiará al dar clic
+let semestreActivo = null;
 
 document.querySelectorAll(".semestre").forEach((section) => {
   section.addEventListener("click", () => {
@@ -38,12 +37,12 @@ function draw() {
 
     if (semestreActivo !== null) {
       const zona = parseInt(semestreActivo);
-      const zonaY = canvas.height / 11; // ← 11 zonas (para 11 secciones)
+      const zonaY = canvas.height / 11;
       const yMin = (zona - 1) * zonaY;
       const yMax = zona * zonaY;
 
       if (point.y >= yMin && point.y < yMax) {
-        color = "#ff66d2"; // Rosa si está en la zona activa
+        color = "#ff66d2"; // Rosa si es zona activa
       }
     }
 
