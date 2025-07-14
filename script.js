@@ -1,3 +1,4 @@
+<script src="script.js"></script>
 const canvas = document.getElementById("malla");
 const ctx = canvas.getContext("2d");
 
