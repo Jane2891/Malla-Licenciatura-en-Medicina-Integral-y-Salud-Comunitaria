@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Malla Interactiva</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8" />
+<title>Malla Interactiva</title>
+<style>
+  body, html { margin:0; padding:0; overflow-y: auto; background: #111; color: white; font-family: Arial, sans-serif; }
+  canvas { display:block; background: #111; position: fixed; top: 0; left: 0; z-index: 0; }
+  main { position: relative; z-index: 1; max-width: 600px; margin: 20px auto; background: #222; padding: 15px; border-radius: 8px; }
+  section.semestre { cursor: pointer; padding: 10px; border-bottom: 1px solid #444; }
+  section.semestre:hover { background: #333; }
+  h2 { margin: 0 0 5px 0; font-size: 1.2em; }
+  ul { margin: 0 0 10px 20px; padding: 0; }
+</style>
 </head>
 <body>
 
-  <canvas id="malla"></canvas>
+<canvas id="malla"></canvas>
 
-  <!-- Tus materias -->
+<main>
+  <!-- 1er Semestre -->
   <section class="semestre" data-semestre="1">
     <h2>1° Semestre</h2>
     <ul>
@@ -20,108 +29,111 @@
     </ul>
   </section>
 
- <!-- 2do Semestre -->
-< <section class="semestre" data-semestre="2">
-  <h2>2° Semestre</h2>
-  <ul>
-    <li>Diagnósticos en comunidad 0201DC</li>
-    <li>Morfología de los sistemas cardio respiratorios, linfático y renal 0202MFSC</li></li>
-    <li>Morfología de los sistemas nervioso, endocrino y digestivo 0203MFSN</li>
-    <li>Adicciones e intoxicaciones 0202AI</li>
-  </ul>
-</section>
+  <!-- 2do Semestre -->
+  <section class="semestre" data-semestre="2">
+    <h2>2° Semestre</h2>
+    <ul>
+      <li>Diagnósticos en comunidad 0201DC</li>
+      <li>Morfología de los sistemas cardio respiratorios, linfático y renal 0202MFSC</li>
+      <li>Morfología de los sistemas nervioso, endocrino y digestivo 0203MFSN</li>
+      <li>Adicciones e intoxicaciones 0202AI</li>
+    </ul>
+  </section>
 
-<!-- 3er Semestre -->
- <section class="semestre" data-semestre="3">
-  <h2>3° Semestre</h2>
-  <ul>
-    <li>Funcionamiento del cuerpo humano 0301FCH</li>
-    <li>Metabolismo y nutrición 0302MN</li>
-    <li>Sexualidad y reproducción humana 0304SRH</li>
-    <li>Promoción y prevención de la salud 0305PPS</li>
-  </ul>
-</section>
+  <!-- 3er Semestre -->
+  <section class="semestre" data-semestre="3">
+    <h2>3° Semestre</h2>
+    <ul>
+      <li>Funcionamiento del cuerpo humano 0301FCH</li>
+      <li>Metabolismo y nutrición 0302MN</li>
+      <li>Sexualidad y reproducción humana 0304SRH</li>
+      <li>Promoción y prevención de la salud 0305PPS</li>
+    </ul>
+  </section>
 
-<!-- 4to Semestre -->
- <section class="semestre" data-semestre="4">
-  <h2>4° Semestre</h2>
-  <ul>
-    <li>Microbiología y parasitología 0401MP</li>
-    <li>Emergencias y desastres 0402ED</li>
-    <li>Propedéutica médica y fisiopatología 0403PMF</li>
-    <li>Impacto del cambio climático en la salud 0404ICS</li>
-  </ul>
-</section>
-  
-<!-- 5to Semestre -->
- <section class="semestre" data-semestre="5">
-  <h2>5° Semestre</h2>
-  <ul>
-    <li>Epidemiología 0501EP</li>
-    <li>Farmacología clínica 0502FM</li>
-    <li>Introducción a la cirugía 0503IC/li>
-    <li>Estadísticas en salud 0504ES</li>
-  </ul>
-</section>
-  
-<!-- 6to Semestre -->
- <section class="semestre" data-semestre="6">
-  <h2>6° Semestre</h2>
-  <ul>
-    <li>Terapéutica médica 0601TM</li>
-    <li>Identificación de afectaciones del aprendizaje y alteraciones mentales 0602TAAIAM</li>
-    <li>Atención integral niñas/niños y adolescentes 0603AINA</li>
-    <li>Atención integral a mujeres 0604AIM</li>
-  </ul>
-</section>
-  
-<!-- 7mo Semestre -->
- <section class="semestre" data-semestre="7">
-  <h2>7° Semestre</h2>
-  <ul>
-    <li>Sistema de salud en México 0701SSM</li>
-    <li>Atención quirúrgica a patologías 0702AQP</li>
-    <li>Atención integral a personas adultas 0703AIPA</li></li>
-    <li>Padecimientos relacionados con alteraciones del metabolismo 0704PRAM</li>
-  </ul>
-</section>
-  
- <section class="semestre" data-semestre="8">
-<section>
-  <h2>8° Semestre</h2>
-  <ul>
-    <li>Introducción a terminologías médicas en español e inglés 0801ITEI</li>
-    <li>Alteraciones del sistema nerviosos central 0802ASNC</li>
-    <li>Geriatría 0803G</li>
-    <li>Disposiciones legales relativas a diversas problemáticas de salud 0408DLPS</li>
-  </ul></section>
-<!-- 9no Semestre-->
-  
- <section class="semestre" data-semestre="9">
-  <h2>9° Semestre</h2>
-  <ul>
-    <li>Urgencias médicas 0901UM</li>
-    <li>Ortopedia y rehabilitación 09020R</li>
-    <li>Cuidados paliativos de largo plazo 0903CPP</li>
-    <li>Ética de las/los profesionales de la salud 0904EPS</li>
-  </ul>
-</section>
-  
-<!-- 10mo y 11vo Semestre -->
-< <section class="semestre" data-semestre="10">
-  <h2>10° Semestre y 11° Semestre</h2>
-  <ul>
-    <li>Internado médico con enfoque en primero y segundo nivel de atención 1001IME</li>
-  </ul>
-</section>
+  <!-- 4to Semestre -->
+  <section class="semestre" data-semestre="4">
+    <h2>4° Semestre</h2>
+    <ul>
+      <li>Microbiología y parasitología 0401MP</li>
+      <li>Emergencias y desastres 0402ED</li>
+      <li>Propedéutica médica y fisiopatología 0403PMF</li>
+      <li>Impacto del cambio climático en la salud 0404ICS</li>
+    </ul>
+  </section>
 
+  <!-- 5to Semestre -->
+  <section class="semestre" data-semestre="5">
+    <h2>5° Semestre</h2>
+    <ul>
+      <li>Epidemiología 0501EP</li>
+      <li>Farmacología clínica 0502FM</li>
+      <li>Introducción a la cirugía 0503IC</li>
+      <li>Estadísticas en salud 0504ES</li>
+    </ul>
+  </section>
+
+  <!-- 6to Semestre -->
+  <section class="semestre" data-semestre="6">
+    <h2>6° Semestre</h2>
+    <ul>
+      <li>Terapéutica médica 0601TM</li>
+      <li>Identificación de afectaciones del aprendizaje y alteraciones mentales 0602TAAIAM</li>
+      <li>Atención integral niñas/niños y adolescentes 0603AINA</li>
+      <li>Atención integral a mujeres 0604AIM</li>
+    </ul>
+  </section>
+
+  <!-- 7mo Semestre -->
+  <section class="semestre" data-semestre="7">
+    <h2>7° Semestre</h2>
+    <ul>
+      <li>Sistema de salud en México 0701SSM</li>
+      <li>Atención quirúrgica a patologías 0702AQP</li>
+      <li>Atención integral a personas adultas 0703AIPA</li>
+      <li>Padecimientos relacionados con alteraciones del metabolismo 0704PRAM</li>
+    </ul>
+  </section>
+
+  <!-- 8vo Semestre -->
+  <section class="semestre" data-semestre="8">
+    <h2>8° Semestre</h2>
+    <ul>
+      <li>Introducción a terminologías médicas en español e inglés 0801ITEI</li>
+      <li>Alteraciones del sistema nervioso central 0802ASNC</li>
+      <li>Geriatría 0803G</li>
+      <li>Disposiciones legales relativas a diversas problemáticas de salud 0408DLPS</li>
+    </ul>
+  </section>
+
+  <!-- 9no Semestre -->
+  <section class="semestre" data-semestre="9">
+    <h2>9° Semestre</h2>
+    <ul>
+      <li>Urgencias médicas 0901UM</li>
+      <li>Ortopedia y rehabilitación 09020R</li>
+      <li>Cuidados paliativos de largo plazo 0903CPP</li>
+      <li>Ética de las/los profesionales de la salud 0904EPS</li>
+    </ul>
+  </section>
+
+  <!-- 10mo y 11vo Semestre -->
+  <section class="semestre" data-semestre="10">
+    <h2>10° y 11° Semestre</h2>
+    <ul>
+      <li>Internado médico con enfoque en primero y segundo nivel de atención 1001IME</li>
+    </ul>
+  </section>
+
+  <!-- 12vo y 13vo Semestre -->
   <section class="semestre" data-semestre="11">
     <h2>12° y 13° Semestre</h2>
     <ul>
       <li>Servicio Social</li>
     </ul>
   </section>
+</main>
 
-  <script src="script.js"></script>
+<script src="script.js" defer></script>
 </body>
 </html>
